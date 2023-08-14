@@ -49,7 +49,9 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  width:15%;
+  max-width: 15%;
+  z-index: 3;
+  min-width: 220px;
 }
 
 .sidebar .logo img {
@@ -86,11 +88,12 @@ body {
 }
 
 .sidebar li a:hover {
-    background-color: var(--dashboard-body-color);
+  background-color: var(--dashboard-body-color);
 }
+
 .sidebar li a:focus {
-    background-color: var(--primary-color);
-    
+  background-color: var(--primary-color);
+
 }
 
 /* -------------Dark Mode------------- */
@@ -112,7 +115,6 @@ body.dark {
   height: 100%;
   display: flex;
   flex-direction: column;
-
 }
 
 .bxs-sun {
@@ -165,18 +167,14 @@ body.dark .switch::before {
   left: 24px
 }
 
-
-
-
-
-/*.home .text {
+.home .text {
   position: relative;
-  left: 223px;
+  /* left: 223px; */
   height: 100vh;
-  width: calc(100% - 223px);
+  /* width: calc(100% - 223px); */
   background-color: var(--dashboard-body-color);
-}*/
+}
 
-.bottom-content{
-    margin-top: 50%;
+.bottom-content {
+  margin-top: 20px;
 }
