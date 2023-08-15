@@ -55,6 +55,9 @@ body {
 
 }
 
+header {
+  min-height: 165px;
+}
 
 .sidebar .logo img {
   max-width: 90%;
@@ -62,16 +65,12 @@ body {
   padding: 10% 20% 0% 27%;
 }
 
-header{
-  min-height: 200px;
-}
 
 .sidebar .headertext .name {
   font-size: 150%;
   display: flex;
   justify-content: center;
   color: var(--text-color);
-  padding-bottom: 10%;
 
 }
 
@@ -81,7 +80,8 @@ header{
   margin-left: 10%;
 }
 
-.sidebar li a {
+.sidebar li a,
+.mode {
   height: 45px;
   width: 90%;
   text-decoration: none;
@@ -95,18 +95,19 @@ header{
 }
 
 .sidebar li a:hover {
-    background-color: var(--dashboard-body-color);
+  background-color: var(--dashboard-body-color);
 }
+
 .sidebar li a:focus {
-    background-color: var(--primary-color);
-    
+  background-color: var(--primary-color);
+  color: var(--white-text-color);
 }
 
 /* -------------Dark Mode------------- */
 body.dark {
-  --body-color: #18191A;
+  --body-color: #242526;
   --light-body-color: #f9fbfc;
-  --dashboard-body-color: #242526;
+  --dashboard-body-color: #18191A;
   --white-color: black;
   --primary-color: #3A3B3C;
   --toggle-color: #FFF;
@@ -114,16 +115,15 @@ body.dark {
   --light-text-color: #4e5559;
   --white-text-color: #fff;
   --border-color: #e6e7e9;
-  --input-border-color: #747a7e;
+  --input-border-color: #5b5c5e;
 }
 
 
 .sidebar .menu-bar {
-  height: calc( 100% - 200px );
+  height: calc(100% - 165px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 .bxs-sun {
@@ -184,8 +184,40 @@ body.dark .switch::before {
   background-color: var(--dashboard-body-color);
 }
 
-.bottom-content{
-  margin-top: 15%;
-    
-}
 /*====End Of Sidebar====*/
+
+/* Searchbar */
+
+.searchbar {
+  position: sticky;
+  top: 0;
+  left: 165px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-color);
+  z-index: 2;
+}
+
+.searchbar .search {
+  padding: 6px;
+  margin: 8px;
+  width: 30%;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  border: 1px solid var(--input-border-color);
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.searchbar input[type=text] {
+  margin-left: 8px;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  border: none;
+}
+
+.searchbar input[type=text]:focus {
+  outline: none;
+}
