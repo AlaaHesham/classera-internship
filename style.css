@@ -183,7 +183,7 @@ body.dark .switch::before {
   width: 100%;
   background-color: var(--dashboard-body-color);
   transition: var(--tran-02);
-  
+
 }
 
 
@@ -226,28 +226,30 @@ body.dark .switch::before {
 
 /*message - bell - profile image*/
 
-.searchbar .notification{
+.searchbar .notification {
   display: flex;
   align-items: center;
   position: fixed;
   right: 15px;
   top: 10px;
-  gap: 20px;
+  /* gap: 20px; */
   color: var(--text-color);
-  cursor: pointer;
- 
 }
 
-.profile-img{
+.notification .msg i {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.profile-img {
   display: flex;
   align-items: center;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
-.profile-img .pro{
+.profile-img .pro {
   width: 35px;
   height: 35px;
   border-radius: 50%;
 }
-
-
-
