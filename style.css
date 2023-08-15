@@ -52,12 +52,18 @@ body {
   max-width: 15%;
   min-width: 220px;
   z-index: 3;
+
 }
 
 
 .sidebar .logo img {
   max-width: 90%;
+  max-height: 200px;
   padding: 10% 20% 0% 27%;
+}
+
+header{
+  min-height: 200px;
 }
 
 .sidebar .headertext .name {
@@ -89,12 +95,11 @@ body {
 }
 
 .sidebar li a:hover {
-  background-color: var(--dashboard-body-color);
+    background-color: var(--dashboard-body-color);
 }
-
 .sidebar li a:focus {
-  background-color: var(--primary-color);
-
+    background-color: var(--primary-color);
+    
 }
 
 /* -------------Dark Mode------------- */
@@ -114,9 +119,11 @@ body.dark {
 
 
 .sidebar .menu-bar {
-  height: 100%;
+  height: calc( 100% - 200px );
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
 }
 
 .bxs-sun {
@@ -177,10 +184,8 @@ body.dark .switch::before {
   background-color: var(--dashboard-body-color);
 }
 
-*/ .bottom-content {
-  margin-top: 50%;
+.bottom-content{
+  margin-top: 15%;
+    
 }
-
-.bottom-content {
-  margin-top: 20px;
-}
+/*====End Of Sidebar====*/
