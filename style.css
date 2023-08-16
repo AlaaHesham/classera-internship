@@ -192,36 +192,39 @@ body.dark .switch::before {
 
 .main-header {
   position: fixed;
-  width: 100%;
+  left: 220px;
+  width: calc(100% - 220px);
   display: flex;
   justify-content: space-between;
   background-color: var(--body-color);
-  transition: var(--tran-02);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: var(--tran-02);
   z-index: 2;
+  
 }
 
 .main-header .search-div {
   flex-grow: 1;
   display: flex;
   justify-content: center;
+  max-width: calc(100% - 220px);
 }
 
- 
 
 .main-header .search-box{
-  display: flex;
-  align-items: center;
   position: relative;
   height: 40px;
   max-width: 600px;
   width: 100%;
-  margin: 1%;
+  margin: 0.8% 3rem;
   padding: 1%;
+  display: flex;
+  align-items: center;
   border-radius: 8px;
   border: 1px solid var(--border-color);
   background-color: var(--body-color);
   color: var(--light-text-color);
+
 }
 
 .main-header input[type=text] {
@@ -244,7 +247,7 @@ body.dark .switch::before {
   position: fixed;
   right: 15px;
   top: 10px;
-  margin-top: 1%;
+  margin-top: 0.5%;
   color: var(--text-color);
 }
 
@@ -255,12 +258,13 @@ body.dark .switch::before {
   cursor: pointer;
 }
 
-.profile-img {
+.notification .profile-img {
   display: flex;
   align-items: center;
+  padding-bottom: 6px;
   padding-left: 30px;
   font-size: 20px;
-  height: 22px;
+  height: 20px;
   border-left: 2px solid var(--border-color);
   cursor: pointer;
 }
@@ -269,7 +273,6 @@ body.dark .switch::before {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-
 }
 
 .profile-img i{
