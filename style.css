@@ -51,8 +51,9 @@ body {
   height: 100%;
   max-width: 15%;
   min-width: 220px;
+  transition: var(--tran-05);
   z-index: 3;
-
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 header {
@@ -114,7 +115,7 @@ body.dark {
   --text-color: #ccc;
   --light-text-color: #4e5559;
   --white-text-color: #fff;
-  --border-color: #e6e7e9;
+  --border-color: #5b5c5e;
   --input-border-color: #5b5c5e;
 }
 
@@ -182,79 +183,117 @@ body.dark .switch::before {
   height: 100vh;
   width: 100%;
   background-color: var(--dashboard-body-color);
-  transition: var(--tran-02);
-
+  transition: var(--tran-05);
 }
 
 
-/* Searchbar */
+/* Header */
 
-.searchbar {
-  position: sticky;
+.main-header {
+  position: fixed;
   top: 0;
-  left: 165px;
+  left: 220px;
+  width: calc(100% - 220px);
+  padding: 5px;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-around;
   background-color: var(--body-color);
-  transition: var(--tran-02);
+  transition: var(--tran-05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   z-index: 2;
 }
 
-.searchbar .search {
+.main-header .search-div {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.main-header .search {
+  position: relative;
+  height: 40px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 3rem;
   padding: 6px;
-  margin: 10px;
-  width: 30%;
   background-color: var(--body-color);
   color: var(--text-color);
-  border: 1px solid var(--input-border-color);
+  border: 1px solid var(--border-color);
   display: flex;
   align-items: center;
   border-radius: 8px;
+  transition: var(--tran-05);
 }
 
-.searchbar input[type=text] {
+.bx-search {
+  font-size: 1.2rem;
+  margin-left: 4px;
+}
+
+.bx-search:hover {
+  cursor: text;
+}
+
+.main-header input[type=text] {
   margin-left: 8px;
   width: 100%;
   background-color: var(--body-color);
   color: var(--text-color);
   border: none;
+  transition: var(--tran-05);
 }
 
-.searchbar input[type=text]:focus {
+.main-header input[type=text]:focus {
   outline: none;
 }
 
-/*message - bell - profile image*/
 
-.searchbar .notification {
+/*message - bell - profile image*/
+.notification {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  position: fixed;
-  right: 15px;
-  top: 10px;
-  /* gap: 20px; */
   color: var(--text-color);
 }
 
-.notification .msg i, .bell i {
-  margin-right: 10px;
+.notification .msg i,
+.bell i {
+  margin-right: 20px;
+  font-size: 1.3rem;
   cursor: pointer;
 }
 
-.msg:hover , .bell:hover, .profile-img:hover{
+.msg:hover,
+.bell:hover,
+.profile-img:hover {
   color: var(--primary-color);
 }
 
-.profile-img {
-  display: flex;
-  align-items: center;
-  margin-left: 10px;
-  cursor: pointer;
+.notification .profile-img {
+  position: relative;
+  height: 40px;
+  margin-right: 3rem;
 }
 
-.profile-img .pro {
-  width: 35px;
-  height: 35px;
+.notification .profile-img .pro {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  margin-left: 1rem;
+}
+
+.profile-img .bx-chevron-down {
+  position: absolute;
+  top: 12px;
+  right: -24px;
+}
+
+.profile-img::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  height: 20px;
+  border-left: 1px solid var(--border-color);
+  transition: var(--tran-05);
 }

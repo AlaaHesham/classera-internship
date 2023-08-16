@@ -1,8 +1,7 @@
 const body = document.querySelector("body"),
-    sidebar = document.querySelector(".sidebar"),
-    searchBtn = document.querySelector(".search-box"),
     modeSwitch = document.querySelector(".toggle-switch"),
-    modeText = document.querySelector(".mode-text");
+    modeText = document.querySelector(".mode-text"),
+    searchIcon = document.querySelector(".bx-search");
 
 modeSwitch.addEventListener("click", () => {
     body.classList.toggle("dark");
@@ -13,4 +12,8 @@ modeSwitch.addEventListener("click", () => {
         modeText.innerText = "Dark Mode";
     }
 });
+
+searchIcon.onclick = () => {
+    document.querySelector(".main-header input[type=text]").focus();
+};
 
