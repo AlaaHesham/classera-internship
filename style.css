@@ -109,7 +109,7 @@ body.dark {
   --light-body-color: #f9fbfc;
   --dashboard-body-color: #18191A;
   --white-color: black;
-  --primary-color: #3A3B3C;
+  --primary-color: #57585a;
   --toggle-color: #FFF;
   --text-color: #ccc;
   --light-text-color: #4e5559;
@@ -237,9 +237,13 @@ body.dark .switch::before {
   color: var(--text-color);
 }
 
-.notification .msg i {
+.notification .msg i, .bell i {
   margin-right: 10px;
   cursor: pointer;
+}
+
+.msg:hover , .bell:hover, .profile-img:hover{
+  color: var(--primary-color);
 }
 
 .profile-img {
