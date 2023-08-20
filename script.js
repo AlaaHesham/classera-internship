@@ -17,3 +17,7 @@ searchIcon.onclick = () => {
     document.querySelector(".main-header input[type=text]").focus();
 };
 
+body.onload = () => {
+    document.querySelector("a.dashboard-section").focus();
+}
+

@@ -102,6 +102,7 @@ header {
 .sidebar li a:focus {
   background-color: var(--primary-color);
   color: var(--white-text-color);
+  outline: none;
 }
 
 /* -------------Dark Mode------------- */
@@ -176,16 +177,6 @@ body.dark .bx-moon {
 body.dark .switch::before {
   left: 24px
 }
-
-
-.home .text {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background-color: var(--dashboard-body-color);
-  transition: var(--tran-05);
-}
-
 
 /* Header */
 
@@ -296,4 +287,48 @@ body.dark .switch::before {
   height: 20px;
   border-left: 1px solid var(--border-color);
   transition: var(--tran-05);
+}
+
+/* Dashboard */
+
+.main-body {
+  display: flex;
+  position: relative;
+  left: 220px;
+  top: 50px;
+  width: calc(100% - 220px);
+  height: calc(100% - 50px);
+  transition: var(--tran-05);
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 3fr 2fr;
+  gap: 1rem;
+  background-color: var(--dashboard-body-color);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  transition: var(--tran-05);
+}
+
+.dashboard .card {
+  background-color: var(--body-color);
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  transition: var(--tran-05);
+}
+
+.card.ticket-overview {
+  grid-column: span 2;
+}
+
+.card.attach-details {
+  grid-row: span 2;
+}
+
+.card.res-time {
+  grid-column: span 3;
 }
