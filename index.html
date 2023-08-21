@@ -8,7 +8,8 @@
     <!--CSS File-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 
 <body>
@@ -126,14 +127,136 @@
     <!-- Dashboard -->
     <div class="main-body">
         <div class="dashboard">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card ticket-overview"></div>
-            <div class="card"></div>
-            <div class="card attach-details"></div>
-            <div class="card res-time"></div>
+
+            <div class="card">
+                <span>Total Tickets</span>
+                <div class="card-content">
+                    <div class="card-content-details">
+                        <div class="card-icon">
+                            <i class='bx bxs-message-square-check'></i>
+                        </div>
+                        <div class="card-info">
+                            <span>17,825</span>
+                            <div class="card-change-rate">
+                                <div class="rate">
+                                    <i class='bx bx-up-arrow-alt'></i>
+                                    <span>7.2%</span>
+                                </div>
+                                <span>than last day</span>
+                            </div>
+                        </div>
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+            </div>
+
+            <div class="card">
+                <span>Total Interactions</span>
+                <div class="card-content">
+                    <div class="card-content-details">
+                        <div class="card-icon">
+                            <i class='bx bxs-chat'></i>
+                        </div>
+                        <div class="card-info">
+                            <span>785,021</span>
+                            <div class="card-change-rate">
+                                <div class="rate">
+                                    <i class='bx bx-up-arrow-alt'></i>
+                                    <span>12.2%</span>
+                                </div>
+                                <span>than last day</span>
+                            </div>
+                        </div>
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+            </div>
+
+            <div class="card">
+                <span>Total Users</span>
+                <div class="card-content">
+                    <div class="card-content-details">
+                        <div class="card-icon">
+                            <i class='bx bxs-user'></i>
+                        </div>
+                        <div class="card-info">
+                            <span>8,482</span>
+                            <div class="card-change-rate">
+                                <div class="rate">
+                                    <i class='bx bx-down-arrow-alt'></i>
+                                    <span>10.2%</span>
+                                </div>
+                                <span>than last day</span>
+                            </div>
+                        </div>
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+            </div>
+
+            <div class="card">
+                <span>Total Groups</span>
+                <div class="card-content">
+                    <div class="card-content-details">
+                        <div class="card-icon">
+                            <i class='bx bxs-group'></i>
+                        </div>
+                        <div class="card-info">
+                            <span>1,420</span>
+                            <div class="card-change-rate">
+                                <div class="rate">
+                                    <i class='bx bx-up-arrow-alt'></i>
+                                    <span>3.2%</span>
+                                </div>
+                                <span>than last day</span>
+                            </div>
+                        </div>
+                    </div>
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+            </div>
+
+            <div class="card ticket-overview">
+                <span>Tickets Overview</span>
+                <div id="chart"></div>
+            </div>
+
+            <div class="card">
+                <span>Overall Rating</span>
+                <div class="rating-ratio-card">
+                    <div class="rating-container">
+                        <div class="rating-val">
+                            <span class="value">4.8</span>
+                            <span>/5</span>
+                        </div>
+                        <div class="rating-stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </div>
+                    </div>
+                    <div class="ratio-container">
+                        <span class="ratio-text">Rating Ratio</span>
+                        <div class="ratio">
+                            <output>33%</output>
+                            <input type="range" max="100" min="0" value="33" />
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="card attach-details">
+                <span>Attachment Details</span>
+                <div id="chart2"></div>
+            </div>
+
+            <div class="card res-time">
+                <span>Response & Resolution Time</span>
+            </div>
         </div>
     </div>
 
