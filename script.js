@@ -58,6 +58,7 @@ var options2 = {
     series: [40, 22, 13, 25],
     chart: {
         type: 'donut',
+
     },
     responsive: [{
         breakpoint: 480,
@@ -77,22 +78,37 @@ var options2 = {
     legend: {
         show: false,
     },
-    labels: ['Images Files', 'Voices Files', 'Videos Files', 'Grapes']
+    labels: ['Images Files', 'Voices Files', 'Videos Files', 'Documents Files'],
+    grid: {
+        show: false,
+    },
+    stroke: {
+        show: true,
+        colors: getComputedStyle(document.documentElement).getPropertyValue('--body-color'),
+    }
+
 };
 
 var donutChart = new ApexCharts(document.querySelector("#chart2"), options2);
 donutChart.render();
+
 // Events
 
 modeSwitch.addEventListener("click", () => {
     body.classList.toggle("dark");
     let textColor = "#ccc";
+    let bodyColor = "#242526";
+
     if (body.classList.contains("dark")) {
         modeText.innerText = "Light Mode";
     } else {
         modeText.innerText = "Dark Mode";
         textColor = "#000";
+        bodyColor = "#fff";
+
+
     }
+
     chart.updateOptions({
         chart: {
             height: 350,
@@ -103,6 +119,13 @@ modeSwitch.addEventListener("click", () => {
             }
         }
     });
+    console.log(bodyColor);
+    donutChart.updateOptions({
+        stroke: {
+            colors: bodyColor,
+        }
+    });
+
 });
 
 searchIcon.onclick = () => {

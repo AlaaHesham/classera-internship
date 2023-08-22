@@ -494,3 +494,67 @@ body.dark .switch::before {
   outline: none;
   border: none;
 }
+
+/* --------Attach Details--------- */
+
+.card.attach-details .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card.attach-details .files {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 30px;
+}
+
+.card.attach-details .files .file {
+  border: 1px solid var(--primary-color);
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.card.attach-details .files .file i {
+  font-size: 2.3rem;
+}
+
+.card.attach-details .files .file .bxs-file-doc {
+  color: #2E93fA;
+}
+
+.card.attach-details .files .file .bxs-file-image {
+  color: #0db8ed;
+}
+
+.card.attach-details .files .file .bxs-user-voice {
+  color: #FF9800;
+}
+
+.card.attach-details .files .file .bxs-videos {
+  color: #E91E63;
+}
+
+.card.attach-details .files .file .file-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.card.attach-details .files .file .file-text div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
