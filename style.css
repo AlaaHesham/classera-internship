@@ -99,7 +99,7 @@ header {
   background-color: var(--dashboard-body-color);
 }
 
-.sidebar li a:focus {
+.sidebar li a.selected {
   background-color: var(--primary-color);
   color: var(--white-text-color);
   outline: none;
@@ -108,7 +108,7 @@ header {
 /* -------------Dark Mode------------- */
 body.dark {
   --body-color: #242526;
-  --light-body-color: #f9fbfc;
+  --light-body-color: #18191A;
   --dashboard-body-color: #18191A;
   --white-color: black;
   /* --primary-color: #57585a; */
@@ -292,7 +292,6 @@ body.dark .switch::before {
 /* --------------Dashboard------------ */
 
 .main-body {
-  display: flex;
   position: relative;
   left: 220px;
   top: 50px;
@@ -305,9 +304,8 @@ body.dark .switch::before {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 3fr 2fr;
-  gap: 1rem;
+  gap: 1.2rem;
   background-color: var(--dashboard-body-color);
-  position: absolute;
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -317,9 +315,11 @@ body.dark .switch::before {
 .dashboard .card {
   background-color: var(--body-color);
   border-radius: 12px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); */
   transition: var(--tran-05);
   padding: 12px 15px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 
 .card.ticket-overview {
@@ -415,10 +415,11 @@ body.dark .switch::before {
 }
 
 /* ------Rating------- */
+
 .card .rating-ratio-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: calc(100% - 22px);
   width: 100%;
@@ -427,18 +428,19 @@ body.dark .switch::before {
 .card .rating-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 }
 
 .card .rating-container .rating-val span {
   color: orange;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .card .rating-container .rating-val .value {
   color: var(--primary-color);
-  font-size: 3rem;
+  font-size: 3.2rem;
 }
 
 .card .fa-star {
@@ -455,12 +457,13 @@ body.dark .switch::before {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 20px;
+  padding: 30px;
+  overflow: hidden;
 }
 
 .card .ratio-container .ratio-text {
   color: var(--primary-color);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .card .ratio-container .ratio {
@@ -468,7 +471,13 @@ body.dark .switch::before {
   height: 80px;
   display: flex;
   align-items: center;
-  width: 200px;
+  /* width: 250px; */
+  width: 100%;
+}
+
+.card .ratio-container .ratio div {
+  width: 100%;
+  overflow: hidden;
 }
 
 .card .ratio-container output {
@@ -480,19 +489,31 @@ body.dark .switch::before {
   padding: 2px 3px;
   border-radius: 3px;
   font-size: 0.8rem;
-  transform: translateX(50px);
 }
-
 
 .card .ratio-container input[type="range"] {
-  background-color: transparent;
-  border: none;
+  appearance: none;
   width: 100%;
+  height: 7px;
+  background: #4285f4;
+  border-radius: 5px;
 }
 
-.card .ratio-container input[type="range"]:focus {
-  outline: none;
-  border: none;
+/* .card .ratio-container input[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--body-color);
+  transition: var(--tran-05);
+} */
+
+.card .ratio-container input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #4285f4;
+  border: 2px solid #4285f4;
+  box-shadow: 257px 0 0 250px var(--body-color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--tran-05);
 }
 
 /* --------Attach Details--------- */
@@ -502,15 +523,16 @@ body.dark .switch::before {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  height: calc(100% - 25px);
 }
 
 .card.attach-details .files {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
   padding: 0px 30px;
+  height: calc(100% - 210px);
 }
 
 .card.attach-details .files .file {
@@ -521,6 +543,7 @@ body.dark .switch::before {
   width: 100%;
   display: flex;
   align-items: center;
+  max-height: calc(25% - 10px);
 }
 
 .card.attach-details .files .file i {
@@ -528,7 +551,7 @@ body.dark .switch::before {
 }
 
 .card.attach-details .files .file .bxs-file-doc {
-  color: #2E93fA;
+  color: #4285f4;
 }
 
 .card.attach-details .files .file .bxs-file-image {

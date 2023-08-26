@@ -32,7 +32,7 @@
             <div class="menu">
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="#" class="dashboard-section">
+                        <a href="#" class="dashboard-section selected">
                             <i class='bx bx-home-alt icon'></i>
                             <span class="section">Dashboard</span>
                         </a>
@@ -127,7 +127,6 @@
     <!-- Dashboard -->
     <div class="main-body">
         <div class="dashboard">
-
             <div class="card">
                 <span>Total Tickets</span>
                 <div class="card-content">
@@ -241,7 +240,9 @@
                         <span class="ratio-text">Rating Ratio</span>
                         <div class="ratio">
                             <output>33%</output>
-                            <input type="range" max="100" min="0" value="33" />
+                            <div>
+                                <input type="range" max="100" min="0" value="0" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -300,9 +301,12 @@
 
             <div class="card res-time">
                 <span>Response & Resolution Time</span>
+                <div id="chart3"></div>
             </div>
         </div>
     </div>
+
+
 
 
     <!-- JavaScript -->
