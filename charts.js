@@ -42,8 +42,11 @@ var options = {
     },
 };
 
+
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
+
+
 
 //------------------------ Donut chart ---------------------
 
@@ -221,9 +224,4 @@ var options4 = {
 const dumbcharts = document.querySelectorAll(".dumbchart");
 
 const dumbchartColors = ['#E91E63', '#005AF0', '#FF9800', '#00a71d'];
-let i = 0;
-dumbcharts.forEach(dumbchart => {
-    options4.colors = dumbchartColors[i++];
-    var dumbbellChart = new ApexCharts(dumbchart, options4);
-    dumbbellChart.render();
-});
+

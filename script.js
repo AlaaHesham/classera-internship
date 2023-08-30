@@ -64,6 +64,15 @@ sidebarFields.forEach(sidebarField => {
         });
 
         sidebarField.classList.add("selected");
+
+        if (!document.getElementsByClassName("tickets")[0].classList.contains("inactive")) {
+            let i = 0;
+            dumbcharts.forEach(dumbchart => {
+                options4.colors = dumbchartColors[i++];
+                var dumbbellChart = new ApexCharts(dumbchart, options4);
+                dumbbellChart.render();
+            });
+        }
     };
 });
 
