@@ -49,33 +49,6 @@ searchIcon.onclick = () => {
     document.querySelector(".main-header input[type=text]").focus();
 };
 
-sidebarFields.forEach(sidebarField => {
-    sidebarField.onfocus = () => {
-        let selectedField = sidebarField.innerText.toLowerCase();
-
-        sidebarFields.forEach(sidebarField => {
-            sidebarField.classList.remove("selected");
-        });
-        pages.forEach(page => {
-            if (page.classList.contains(selectedField))
-                page.classList.remove("inactive");
-            else
-                page.classList.add("inactive");
-        });
-
-        sidebarField.classList.add("selected");
-
-        if (!document.getElementsByClassName("tickets")[0].classList.contains("inactive")) {
-            let i = 0;
-            dumbcharts.forEach(dumbchart => {
-                options4.colors = dumbchartColors[i++];
-                var dumbbellChart = new ApexCharts(dumbchart, options4);
-                dumbbellChart.render();
-            });
-        }
-    };
-});
-
 function positionRatioBox() {
     let ratioBox = document.querySelector(".card .ratio-container output");
     ratioBox.innerText = ratio.value + "%";
@@ -121,7 +94,7 @@ divs.forEach(div => {
     div.style.width = div.getAttribute("value");
 });
 
-// Which page to display
+
 
 
 

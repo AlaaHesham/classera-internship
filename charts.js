@@ -43,9 +43,6 @@ var options = {
 };
 
 
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-chart.render();
-
 
 
 //------------------------ Donut chart ---------------------
@@ -74,8 +71,6 @@ var options2 = {
 
 };
 
-var donutChart = new ApexCharts(document.querySelector("#chart2"), options2);
-donutChart.render();
 
 //------------------------ Bar chart ---------------------
 
@@ -141,9 +136,6 @@ var options3 = {
     colors: ['#4285f4', '#0db8ed', '#FF9800', '#E91E63'],
 
 };
-
-var barChart = new ApexCharts(document.querySelector("#chart3"), options3);
-barChart.render();
 
 // Dumbble Chart
 
@@ -221,7 +213,13 @@ var options4 = {
     }
 };
 
-const dumbcharts = document.querySelectorAll(".dumbchart");
+const dumbchartDivs = document.querySelectorAll(".dumbchart");
 
 const dumbchartColors = ['#E91E63', '#005AF0', '#FF9800', '#00a71d'];
 
+var barChart = new ApexCharts(document.querySelector("#chart3"), options3);
+barChart.render();
+var donutChart = new ApexCharts(document.querySelector("#chart2"), options2);
+donutChart.render();
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
