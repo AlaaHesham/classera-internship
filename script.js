@@ -108,25 +108,21 @@ const brandSelector = document.querySelector("#brand .dropdown-selector"),
     brandContent = document.querySelector("#brand .dropdown-content"),
     brandItems = document.querySelectorAll("#brand .item");
 
-let brandListOpen = false;
 brandSelector.addEventListener("click", () => {
-    if (!brandListOpen) {   // open the list
-        brandContent.style.display = "block";
-        rotateArrow(brandArrow, true);
-    } else {
-        brandContent.style.display = "none";
-        rotateArrow(brandArrow, false);
-    }
+    brandContent.classList.toggle("show");
 
-    brandListOpen = !brandListOpen;
+    if (brandContent.classList.contains("show"))
+        rotateArrow(brandArrow, true);
+    else
+        rotateArrow(brandArrow, false);
+
 });
 
 brandItems.forEach(item => {
     item.addEventListener("click", () => {
         document.querySelector("#brand .dropdown-selector .selector-content").innerHTML = item.innerHTML;
-        brandContent.style.display = "none";
+        brandContent.classList.remove("show");
         rotateArrow(brandArrow, false);
-        brandListOpen = false;
     });
 });
 
@@ -137,27 +133,25 @@ const moduleSelector = document.querySelector("#module .dropdown-selector"),
     moduleContent = document.querySelector("#module .dropdown-content"),
     moduleItems = document.querySelectorAll("#module .item");
 
-let moduleListOpen = false;
 moduleSelector.addEventListener("click", () => {
-    if (!moduleListOpen) {   // open the list
-        moduleContent.style.display = "block";
-        rotateArrow(moduleArrow, true);
-    } else {
-        moduleContent.style.display = "none";
-        rotateArrow(moduleArrow, false);
-    }
+    moduleContent.classList.toggle("show");
 
-    moduleListOpen = !moduleListOpen;
+    if (moduleContent.classList.contains("show"))
+        rotateArrow(moduleArrow, true);
+    else
+        rotateArrow(moduleArrow, false);
+
 });
 
 moduleItems.forEach(item => {
     item.addEventListener("click", () => {
         document.querySelector("#module .dropdown-selector .selector-content").innerHTML = item.innerHTML;
-        moduleContent.style.display = "none";
+        moduleContent.classList.remove("show");
         rotateArrow(moduleArrow, false);
-        moduleListOpen = false;
     });
 });
+
+window.addEventListener("mouseup", hideLists);
 
 
 // functions
@@ -170,4 +164,10 @@ function rotateArrow(arrow, up) {
     }
 }
 
-
+function hideLists() {
+    moduleContent.classList.remove("show");
+    brandContent.classList.remove("show");
+    rotateArrow(brandArrow, false);
+    rotateArrow(moduleArrow, false);
+    console.log("done")
+}

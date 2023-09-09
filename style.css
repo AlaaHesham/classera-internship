@@ -1088,6 +1088,10 @@ hr {
   transition: var(--tran-05);
 }
 
+.dropdown .dropdown-content.show {
+  display: block;
+}
+
 .item-content {
   display: flex;
   align-items: center;
@@ -1096,6 +1100,7 @@ hr {
 
 .item:hover {
   background-color: #445bff1f;
+  cursor: pointer;
 }
 
 .item-content .item-img {
