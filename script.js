@@ -151,7 +151,7 @@ moduleItems.forEach(item => {
     });
 });
 
-window.addEventListener("mouseup", hideLists);
+document.addEventListener("click", hideLists);
 
 
 // functions
@@ -164,10 +164,13 @@ function rotateArrow(arrow, up) {
     }
 }
 
-function hideLists() {
-    moduleContent.classList.remove("show");
-    brandContent.classList.remove("show");
-    rotateArrow(brandArrow, false);
-    rotateArrow(moduleArrow, false);
-    console.log("done")
+function hideLists(event) {
+    if (!(event.target.classList.contains("selector")
+        || event.target.parentNode.classList.contains("selector")
+        || event.target.parentNode.classList.contains("item-content"))) {
+        moduleContent.classList.remove("show");
+        brandContent.classList.remove("show");
+        rotateArrow(brandArrow, false);
+        rotateArrow(moduleArrow, false);
+    }
 }
