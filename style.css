@@ -586,14 +586,14 @@ body.dark .switch::before {
 /* ---------------------Tickets------------------------ */
 
 .tickets {
-  padding: 0 30px 10px;
+  padding: 0 40px 10px;
   background-color: var(--ticket-body-color);
   width: 100%;
   height: fit-content;
   transition: var(--tran-05);
 }
 
-.tickets .history {
+.history {
   display: flex;
   align-items: center;
   padding: 10px 0px;
@@ -653,6 +653,10 @@ body.dark .switch::before {
 
 .tickets .tickets-header .add-btn:hover {
   cursor: pointer;
+}
+
+.tickets .tickets-header .add-btn:active {
+  background-color: rgb(25, 66, 104);
 }
 
 .tickets .tab-list {
@@ -815,7 +819,7 @@ tbody {
   align-items: center;
 }
 
-.tickets table td .brand-content .brand-img {
+.brand-img {
   overflow: hidden;
   border: 1px solid white;
   border-radius: 10px;
@@ -977,6 +981,177 @@ tbody {
   width: 90px;
 }
 
+/*------------------------------ Add Ticket -------------------------- */
+.add-ticket-content .field-container {
+  display: flex;
+  color: var(--text-color);
+  width: 100%;
+}
+
+.add-ticket-content .field-container .field-text {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+  transition: var(--tran-05);
+}
+
+.add-ticket-content .field-container .field-text label {
+  font-weight: 500;
+}
+
+.add-ticket-content .field-container .field-text span {
+  font-size: 0.9rem;
+  padding-top: 5px;
+}
+
+.add-ticket-content .field-container .input-container,
+.dropdown {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 300px;
+}
+
+.add-ticket-content .field-container input,
+.add-ticket-content .field-container textarea,
+.dropdown .dropdown-selector {
+  background-color: var(--ticket-body-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  outline: none;
+  border-radius: 5px;
+  height: 50px;
+  width: 60%;
+  padding: 5px;
+  font-size: 1rem;
+  transition: var(--tran-05);
+}
+
+.add-ticket-content .field-container input:focus,
+.add-ticket-content .field-container textarea:focus {
+  border: 2px solid var(--primary-color);
+}
+
+.add-ticket-content .field-container .textarea-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px 0 20px 155px;
+}
+
+.add-ticket-content .field-container textarea {
+  height: 150px;
+  padding: 5px;
+}
+
+
+hr {
+  font-size: 0.5rem;
+  border-top: 1px solid var(--border-color);
+  border-bottom: none;
+  transition: var(--tran-05);
+}
+
+/* dropdown menu */
+.dropdown {
+  padding-left: 170px;
+  position: relative;
+}
+
+.dropdown .dropdown-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown .dropdown-selector:hover {
+  cursor: pointer;
+}
+
+.dropdown .dropdown-selector i {
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+
+
+.dropdown .dropdown-content {
+  display: none;
+  background-color: var(--ticket-body-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  position: absolute;
+  top: 90px;
+  width: 51%;
+  z-index: 2;
+  transition: var(--tran-05);
+}
+
+.item-content {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.item:hover {
+  background-color: #445bff1f;
+}
+
+.item-content .item-img {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 7px;
+  height: 40px;
+  margin: 10px 15px;
+}
+
+.item-content .item-img img {
+  width: 70px;
+}
+
+.item-content span {
+  margin-left: 10px;
+}
+
+/* buttons */
+.add-ticket-btns {
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px;
+  margin-right: 120px;
+  margin-bottom: 150px;
+}
+
+.add-ticket-btns .cancel-btn,
+.add-ticket-btns .save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  margin-right: 10px;
+  background-color: var(--ticket-body-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 7px;
+  border-radius: 7px;
+  transition: var(--tran-05);
+}
+
+.add-ticket-btns .save-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.add-ticket-btns .cancel-btn:hover,
+.add-ticket-btns .save-btn:hover {
+  cursor: pointer;
+}
+
+/* ------------------- End -------------------- */
 .inactive {
   display: none;
 }

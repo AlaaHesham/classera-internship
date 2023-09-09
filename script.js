@@ -5,7 +5,8 @@ const body = document.querySelector("body"),
     ratio = document.querySelector(".card .ratio-container input[type='range']"),
     sidebarFields = document.querySelectorAll(".sidebar li a"),
     ticketTabs = document.querySelectorAll(".tickets .tab-list span"),
-    pages = document.querySelectorAll(".main-body>div");
+    pages = document.querySelectorAll(".main-body>div"),
+    addTicketBtn = document.querySelector(".add-btn");
 
 // ----------------------- Events ---------------------------
 
@@ -94,7 +95,79 @@ divs.forEach(div => {
     div.style.width = div.getAttribute("value");
 });
 
+// ------------- Add Ticket Button ----------------
+
+// addTicketBtn.addEventListener("click", () => {
+// });
 
 
+// ------ dropdown list --------
+// brand
+const brandSelector = document.querySelector("#brand .dropdown-selector"),
+    brandArrow = document.querySelector("#brand .dropdown-selector i"),
+    brandContent = document.querySelector("#brand .dropdown-content"),
+    brandItems = document.querySelectorAll("#brand .item");
+
+let brandListOpen = false;
+brandSelector.addEventListener("click", () => {
+    if (!brandListOpen) {   // open the list
+        brandContent.style.display = "block";
+        rotateArrow(brandArrow, true);
+    } else {
+        brandContent.style.display = "none";
+        rotateArrow(brandArrow, false);
+    }
+
+    brandListOpen = !brandListOpen;
+});
+
+brandItems.forEach(item => {
+    item.addEventListener("click", () => {
+        document.querySelector("#brand .dropdown-selector .selector-content").innerHTML = item.innerHTML;
+        brandContent.style.display = "none";
+        rotateArrow(brandArrow, false);
+        brandListOpen = false;
+    });
+});
+
+// module
+
+const moduleSelector = document.querySelector("#module .dropdown-selector"),
+    moduleArrow = document.querySelector("#module .dropdown-selector i"),
+    moduleContent = document.querySelector("#module .dropdown-content"),
+    moduleItems = document.querySelectorAll("#module .item");
+
+let moduleListOpen = false;
+moduleSelector.addEventListener("click", () => {
+    if (!moduleListOpen) {   // open the list
+        moduleContent.style.display = "block";
+        rotateArrow(moduleArrow, true);
+    } else {
+        moduleContent.style.display = "none";
+        rotateArrow(moduleArrow, false);
+    }
+
+    moduleListOpen = !moduleListOpen;
+});
+
+moduleItems.forEach(item => {
+    item.addEventListener("click", () => {
+        document.querySelector("#module .dropdown-selector .selector-content").innerHTML = item.innerHTML;
+        moduleContent.style.display = "none";
+        rotateArrow(moduleArrow, false);
+        moduleListOpen = false;
+    });
+});
+
+
+// functions
+function rotateArrow(arrow, up) {
+    if (up) {
+        arrow.style.transform = "rotate(180deg)";
+    }
+    else {
+        arrow.style.transform = "rotate(360deg)";
+    }
+}
 
 

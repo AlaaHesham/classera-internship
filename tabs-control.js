@@ -1,5 +1,5 @@
-const dashboardPage = document.getElementsByClassName("dashboard")[0],
-    ticketsPage = document.getElementsByClassName("tickets")[0];
+const dashboardPage = document.getElementById("dashboard"),
+    ticketsPage = document.getElementById("tickets");
 
 let dumbbellCharts = [];
 
