@@ -5,8 +5,7 @@ const body = document.querySelector("body"),
     ratio = document.querySelector(".card .ratio-container input[type='range']"),
     sidebarFields = document.querySelectorAll(".sidebar li a"),
     ticketTabs = document.querySelectorAll(".tickets .tab-list span"),
-    pages = document.querySelectorAll(".main-body>div"),
-    addTicketBtn = document.querySelector(".add-btn");
+    pages = document.querySelectorAll(".main-body>div");
 
 // ----------------------- Events ---------------------------
 
@@ -95,12 +94,6 @@ divs.forEach(div => {
     div.style.width = div.getAttribute("value");
 });
 
-// ------------- Add Ticket Button ----------------
-
-// addTicketBtn.addEventListener("click", () => {
-// });
-
-
 // ------ dropdown list --------
 // brand
 const brandSelector = document.querySelector("#brand .dropdown-selector"),
@@ -154,7 +147,7 @@ moduleItems.forEach(item => {
 document.addEventListener("click", hideLists);
 
 
-// functions
+// ----------functions-----------
 function rotateArrow(arrow, up) {
     if (up) {
         arrow.style.transform = "rotate(180deg)";
@@ -174,3 +167,4 @@ function hideLists(event) {
         rotateArrow(moduleArrow, false);
     }
 }
+

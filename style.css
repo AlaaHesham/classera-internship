@@ -855,7 +855,7 @@ tbody {
 .tickets table td .status-container {
   display: flex;
   align-items: center;
-  padding: 20px 10px;
+  padding: 20px 0;
 }
 
 .tickets table td .status-bubble {
@@ -1040,7 +1040,7 @@ tbody {
 }
 
 .add-ticket-content .field-container textarea {
-  height: 150px;
+  height: 175px;
   padding: 5px;
 }
 
@@ -1158,6 +1158,40 @@ hr {
 .add-ticket-btns .cancel-btn:hover,
 .add-ticket-btns .save-btn:hover {
   cursor: pointer;
+  background-color: rgb(143 151 163 / 14%);
+}
+
+.add-ticket-btns .save-btn:hover {
+  background-color: rgb(46 104 199);
+}
+
+.add-ticket-btns .save-btn:active {
+  background-color: rgb(25, 66, 104);
+}
+
+.bx-check {
+  font-size: 1.8rem;
+}
+
+.loading::after {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-top: transparent;
+  border-radius: 50%;
+  animation: spin 2s ease infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 /* ------------------- End -------------------- */
