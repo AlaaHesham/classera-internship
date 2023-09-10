@@ -72,8 +72,7 @@ saveBtn.addEventListener("click", () => {
     }, 3000);
 
     setTimeout(() => {
-        document.querySelector(".sidebar li a.tickets-section").focus();
-        addTicketPage.classList.add("inactive");
+        resetAddTicketPage();
     }, 3500);
 });
 
@@ -81,6 +80,17 @@ saveBtn.addEventListener("click", () => {
 const cancelBtn = document.querySelector(".add-ticket-btns .cancel-btn");
 
 cancelBtn.addEventListener("click", () => {
+    resetAddTicketPage();
+});
+
+// functions
+
+function resetAddTicketPage() {
     document.querySelector(".sidebar li a.tickets-section").focus();
     addTicketPage.classList.add("inactive");
-});
+    saveBtn.innerHTML = "Save";
+    document.querySelector(".add-ticket-content .field-container input").value = "";
+    document.querySelector(".add-ticket-content .field-container textarea").value = "";
+    brandSelectorContent.innerHTML = "<span class='selector'> Select Product</span>";
+    moduleSelectorContent.innerHTML = "<span class='selector'> Select Module</span>";
+}

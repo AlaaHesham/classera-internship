@@ -99,22 +99,40 @@ divs.forEach(div => {
 const brandSelector = document.querySelector("#brand .dropdown-selector"),
     brandArrow = document.querySelector("#brand .dropdown-selector i"),
     brandContent = document.querySelector("#brand .dropdown-content"),
-    brandItems = document.querySelectorAll("#brand .item");
+    brandItems = document.querySelectorAll("#brand .item"),
+    brandSelectorContent = document.querySelector("#brand .dropdown-selector .selector-content");
 
 brandSelector.addEventListener("click", () => {
-    brandContent.classList.toggle("show");
-
-    if (brandContent.classList.contains("show"))
-        rotateArrow(brandArrow, true);
-    else
+    if (brandContent.classList.contains("show")) { // then we want to close it
         rotateArrow(brandArrow, false);
+        brandContent.classList.remove("roll-down");
+        brandContent.classList.add("roll-up");
+        setTimeout(() => {
+            brandContent.classList.toggle("show");
+            brandContent.parentNode.classList.toggle("show");
+        }, 900);
+    }
+    else {
+        rotateArrow(brandArrow, true);
+        brandContent.classList.remove("roll-up");
+        brandContent.classList.add("roll-down");
+        brandContent.classList.toggle("show");
+        brandContent.parentNode.classList.toggle("show");
+    }
 
 });
 
 brandItems.forEach(item => {
     item.addEventListener("click", () => {
-        document.querySelector("#brand .dropdown-selector .selector-content").innerHTML = item.innerHTML;
-        brandContent.classList.remove("show");
+        brandSelectorContent.innerHTML = item.innerHTML;
+        brandContent.classList.remove("roll-down");
+        brandContent.classList.add("roll-up");
+
+        setTimeout(() => {
+            brandContent.classList.remove("show");
+            brandContent.parentNode.classList.remove("show");
+        }, 900);
+
         rotateArrow(brandArrow, false);
     });
 });
@@ -124,22 +142,39 @@ brandItems.forEach(item => {
 const moduleSelector = document.querySelector("#module .dropdown-selector"),
     moduleArrow = document.querySelector("#module .dropdown-selector i"),
     moduleContent = document.querySelector("#module .dropdown-content"),
-    moduleItems = document.querySelectorAll("#module .item");
+    moduleItems = document.querySelectorAll("#module .item"),
+    moduleSelectorContent = document.querySelector("#module .dropdown-selector .selector-content");
 
 moduleSelector.addEventListener("click", () => {
-    moduleContent.classList.toggle("show");
-
-    if (moduleContent.classList.contains("show"))
-        rotateArrow(moduleArrow, true);
-    else
+    if (moduleContent.classList.contains("show")) { // then we want to close it
         rotateArrow(moduleArrow, false);
-
+        moduleContent.classList.remove("roll-down");
+        moduleContent.classList.add("roll-up");
+        setTimeout(() => {
+            moduleContent.classList.toggle("show");
+            moduleContent.parentNode.classList.toggle("show");
+        }, 900);
+    }
+    else {
+        rotateArrow(moduleArrow, true);
+        moduleContent.classList.remove("roll-up");
+        moduleContent.classList.add("roll-down");
+        moduleContent.classList.toggle("show");
+        moduleContent.parentNode.classList.toggle("show");
+    }
 });
 
 moduleItems.forEach(item => {
     item.addEventListener("click", () => {
-        document.querySelector("#module .dropdown-selector .selector-content").innerHTML = item.innerHTML;
-        moduleContent.classList.remove("show");
+        moduleSelectorContent.innerHTML = item.innerHTML;
+        moduleContent.classList.remove("roll-down");
+        moduleContent.classList.add("roll-up");
+
+        setTimeout(() => {
+            moduleContent.classList.remove("show");
+            moduleContent.parentNode.classList.remove("show");
+        }, 900);
+
         rotateArrow(moduleArrow, false);
     });
 });
@@ -157,14 +192,29 @@ function rotateArrow(arrow, up) {
     }
 }
 
-function hideLists(event) {
+async function hideLists(event) {
     if (!(event.target.classList.contains("selector")
         || event.target.parentNode.classList.contains("selector")
-        || event.target.parentNode.classList.contains("item-content"))) {
-        moduleContent.classList.remove("show");
-        brandContent.classList.remove("show");
+        || event.target.parentNode.classList.contains("item-content"))
+        && (moduleContent.classList.contains("show") || brandContent.classList.contains("show"))) {
+
+        moduleContent.classList.remove("roll-down");
+        moduleContent.classList.add("roll-up");
+        brandContent.classList.remove("roll-down");
+        brandContent.classList.add("roll-up");
+
+        setTimeout(() => {
+            moduleContent.classList.remove("show");
+            brandContent.classList.remove("show");
+            brandContent.parentNode.classList.remove("show");
+            moduleContent.parentNode.classList.remove("show");
+            moduleContent.classList.remove("roll-up");
+        }, 900);
+
+
         rotateArrow(brandArrow, false);
         rotateArrow(moduleArrow, false);
+
     }
 }
 
