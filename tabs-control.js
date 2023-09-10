@@ -86,6 +86,7 @@ cancelBtn.addEventListener("click", () => {
 // functions
 
 function resetAddTicketPage() {
+
     document.querySelector(".sidebar li a.tickets-section").focus();
     addTicketPage.classList.add("inactive");
     saveBtn.innerHTML = "Save";
@@ -93,4 +94,5 @@ function resetAddTicketPage() {
     document.querySelector(".add-ticket-content .field-container textarea").value = "";
     brandSelectorContent.innerHTML = "<span class='selector'> Select Product</span>";
     moduleSelectorContent.innerHTML = "<span class='selector'> Select Module</span>";
+
 }

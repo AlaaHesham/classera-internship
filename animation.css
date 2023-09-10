@@ -1,0 +1,102 @@
+/* ----------------key frames ---------------- */
+@keyframes page-fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes page-appear {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes roll-down {
+    from {
+        top: -250px;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+/* ----------------------- Animations --------------- */
+
+/* Pages fading animation */
+.dashboard,
+.tickets {
+    animation: page-fade 1.2s ease;
+}
+
+/* Add ticket page fading animation */
+#add-ticket section {
+    position: relative;
+    animation: page-appear 1s ease;
+}
+
+#container1 {
+    position: relative;
+    animation: page-appear 1.2s ease;
+}
+
+#container2 {
+    position: relative;
+    animation: page-appear 1.4s ease;
+}
+
+#container3 {
+    position: relative;
+    animation: page-appear 1.6s ease;
+}
+
+#container4 {
+    position: relative;
+    animation: page-appear 1.8s ease;
+}
+
+#container5 {
+    position: relative;
+    animation: page-appear 2s ease;
+}
+
+/* Dropdown lists animation*/
+.dropdown .dropdown-content.roll-up {
+    animation: roll-down 1s ease reverse;
+    top: -260px;
+}
+
+.dropdown .dropdown-content.roll-down {
+    animation: roll-down 1s ease;
+    top: 0;
+}
+
+/* Loading animation */
+.loading::after {
+    content: " ";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-top: transparent;
+    border-radius: 50%;
+    animation: spin 2s ease infinite;
+}

@@ -984,18 +984,8 @@ tbody {
 /*------------------------------ Add Ticket -------------------------- */
 #add-ticket {
   position: relative;
-  animation: page-appear 0.75s ease;
 }
 
-@keyframes page-appear {
-  from {
-    left: 100%;
-  }
-
-  to {
-    left: 0;
-  }
-}
 
 .add-ticket-content .field-container {
   display: flex;
@@ -1059,7 +1049,6 @@ tbody {
   padding: 5px;
 }
 
-
 hr {
   font-size: 0.5rem;
   border-top: 1px solid var(--border-color);
@@ -1120,30 +1109,9 @@ hr {
   transition: var(--tran-05);
 }
 
-@keyframes roll-down {
-  from {
-    top: -250px;
-  }
-
-  to {
-    top: 0;
-  }
-}
-
-
 .dropdown .dropdown-content.show,
 .dropdown .dropdown-content-container.show {
   display: block;
-}
-
-.dropdown .dropdown-content.roll-up {
-  animation: roll-down 1s ease reverse;
-  top: -260px;
-}
-
-.dropdown .dropdown-content.roll-down {
-  animation: roll-down 1s ease;
-  top: 0;
 }
 
 .item-content {
@@ -1221,27 +1189,6 @@ hr {
 
 .bx-check {
   font-size: 1.8rem;
-}
-
-.loading::after {
-  content: " ";
-  display: block;
-  width: 20px;
-  height: 20px;
-  border: 1px solid white;
-  border-top: transparent;
-  border-radius: 50%;
-  animation: spin 2s ease infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0turn);
-  }
-
-  to {
-    transform: rotate(1turn);
-  }
 }
 
 /* ------------------- End -------------------- */
