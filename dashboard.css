@@ -1,0 +1,286 @@
+/* --------------Dashboard------------ */
+
+.main-body {
+    position: relative;
+    left: 220px;
+    top: 50px;
+    width: calc(100% - 220px);
+    height: calc(100% - 50px);
+    transition: var(--tran-05);
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 2fr;
+    gap: 1.2rem;
+    background-color: var(--dashboard-body-color);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    transition: var(--tran-05);
+}
+
+.dashboard .card {
+    background-color: var(--body-color);
+    border-radius: 12px;
+    transition: var(--tran-05);
+    padding: 12px 15px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.card.ticket-overview {
+    grid-column: span 2;
+}
+
+.card.attach-details {
+    grid-row: span 2;
+}
+
+.card.res-time {
+    grid-column: span 3;
+}
+
+/* -------Card Details-------- */
+
+.card span {
+    color: var(--text-color);
+}
+
+.card .card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .card-content .card-content-details {
+    display: flex;
+    align-items: center;
+}
+
+.card-content-details .card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #96a6e140;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 14px;
+}
+
+.card-content-details .card-icon i {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+.card-content-details .card-info {
+    margin: 0px 9px;
+}
+
+.card-content-details .card-info>span {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.card-info .card-change-rate {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.card-info .card-change-rate .rate {
+    display: flex;
+    align-items: center;
+    margin-right: 6px;
+}
+
+.card-info .card-change-rate i {
+    font-size: 0.9rem;
+}
+
+.card-info .card-change-rate .bx-up-arrow-alt,
+.card-info .card-change-rate .bx-up-arrow-alt+span {
+    color: #02b320;
+}
+
+.card-info .card-change-rate .bx-down-arrow-alt,
+.card-info .card-change-rate .bx-down-arrow-alt+span {
+    color: red;
+}
+
+.card .card-content .bx-chevron-right {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.card .card-content .bx-chevron-right:hover {
+    cursor: pointer;
+}
+
+.chart {
+    color: var(--primary-color);
+}
+
+/* ------Rating------- */
+
+.card .rating-ratio-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100% - 22px);
+    width: 100%;
+}
+
+.card .rating-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card .rating-container .rating-val span {
+    color: orange;
+    font-size: 1.8rem;
+}
+
+.card .rating-container .rating-val .value {
+    color: var(--primary-color);
+    font-size: 3.2rem;
+}
+
+.card .fa-star {
+    font-size: 2rem;
+}
+
+.card .fa-star.checked {
+    color: orange;
+}
+
+.card .ratio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.card .ratio-container .ratio-text {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.card .ratio-container .ratio {
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    /* width: 250px; */
+    width: 100%;
+}
+
+.card .ratio-container .ratio div {
+    width: 100%;
+    overflow: hidden;
+}
+
+.card .ratio-container output {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    background-color: var(--primary-color);
+    color: var(--white-text-color);
+    padding: 2px 3px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.card .ratio-container input[type="range"] {
+    appearance: none;
+    width: 100%;
+    height: 7px;
+    background: #4285f4;
+    border-radius: 5px;
+}
+
+.card .ratio-container input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #4285f4;
+    border: 2px solid #4285f4;
+    box-shadow: 257px 0 0 250px var(--body-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+/* --------Attach Details--------- */
+
+.card.attach-details .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100% - 25px);
+}
+
+.card.attach-details .files {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0px 30px;
+    height: calc(100% - 210px);
+}
+
+.card.attach-details .files .file {
+    border: 1px solid var(--primary-color);
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    max-height: calc(25% - 10px);
+}
+
+.card.attach-details .files .file i {
+    font-size: 2.3rem;
+}
+
+.card.attach-details .files .file .bxs-file-doc {
+    color: #4285f4;
+}
+
+.card.attach-details .files .file .bxs-file-image {
+    color: #0db8ed;
+}
+
+.card.attach-details .files .file .bxs-user-voice {
+    color: #FF9800;
+}
+
+.card.attach-details .files .file .bxs-videos {
+    color: #E91E63;
+}
+
+.card.attach-details .files .file .file-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.card.attach-details .files .file .file-text div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+}
