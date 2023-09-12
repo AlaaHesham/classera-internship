@@ -12,6 +12,13 @@
 </head>
 
 <body>
+
+    <div id="loading-screen" class="loader">
+        <img src="MicrosoftTeams-image.png" alt="Loading...">
+      </div>
+
+    <!--<div class="outer-grid-container">-->
+
     <!--Sidebar-->
     <nav class="sidebar">
         <header>
@@ -31,13 +38,13 @@
             <div class="menu">
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="index.html">
                             <i class='bx bx-home-alt icon'></i>
                             <span class="section">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="tickets.html">
                             <i class='bx bx-message-square-check icon'></i>
                             <span class="section">Tickets</span>
                         </a>
@@ -81,14 +88,14 @@
                     </li>
 
                     <li class="nav-link mode">
-
-                        <i class='bx bx-moon icon'></i>
-                        <i class='bx bxs-sun icon'></i>
-                        <span class="section mode-text">Dark Mode</span>
-                        <div class="toggle-switch">
-                            <span class="switch"></span>
-                        </div>
-
+                        
+                            <i class='bx bx-moon icon'></i>
+                            <i class='bx bxs-sun icon'></i>
+                            <span class="section mode-text">Dark Mode</span>
+                            <div class="toggle-switch">
+                                <span class="switch"></span>
+                            </div>
+                        
                     </li>
                 </ul>
             </div>
@@ -125,13 +132,128 @@
         </div> 
     </div>
 
-    <!-- Body -->
-    <section class="home" id="home">
-        <div class="text">Dashboard</div>
-    </section>
+        <!--Dashboard Grid-->
+    <div class="dashboard-grid" id="dashboard-grid">
+
+           <div class="sec1">Total Tickets 
+                <div class="sec-grid">  
+                    <div class="in-icon">     
+                        <i class='bx bxs-message-square-check'></i>
+                    </div>  
+                    <span class="data">
+                        <span class="num">17,825</span><br>
+                        <i class='bx bx-up-arrow-alt'></i><span class="percent">7.2% </span>than last day
+                    </span>     
+                    <i id="side-arrow" class='bx bx-chevron-right'></i>
+                </div>     
+            </div>
+
+            <div class="sec2">Total Interactions
+                <div class="sec-grid">  
+                    <div class="in-icon">     
+                        <i class='bx bxs-chat'></i>
+                    </div>  
+                    <span class="data">
+                        <span class="num">785,021</span><br>
+                        <i class='bx bx-up-arrow-alt'></i><span class="percent">12.2% </span>than last day
+                    </span>     
+                    <i id="side-arrow" class='bx bx-chevron-right'></i>
+                </div>
+            </div>
+
+            <div class="sec3">Total Users
+                <div class="sec-grid">  
+                    <div class="in-icon">     
+                        <i class='bx bxs-user'></i>
+                    </div>  
+                    <span class="data">
+                        <span class="num">8,482</span><br>
+                        <i class='bx bx-down-arrow-alt'></i><span class="percent">10.2% </span>than last day
+                    </span>     
+                    <i id="side-arrow" class='bx bx-chevron-right'></i>
+                </div>
+            </div>
+
+            <div class="sec4">Total Groups
+                <div class="sec-grid">  
+                    <div class="in-icon">     
+                        <i class='bx bxs-group' ></i>
+                    </div>  
+                    <span class="data">
+                        <span class="num">1,420</span><br>
+                        <i class='bx bx-up-arrow-alt'></i><span class="percent">3.2% </span>than last day
+                    </span>     
+                    <i id="side-arrow" class='bx bx-chevron-right'></i>
+                </div>
+            </div>
+
+
+            <div class="sec5" id="chart">Tickets Overview</div>
+
+            <!--Slider-->
+            <div class="sec6">Overall Rating
+
+                <div class="rate">4.8<small class="slash">/5</small></div>
+               
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                 </div>
+
+                 <div class="rate-text">Rating Ratio</div>
+
+                <div class="range">
+                    <div class="sliderValue">
+                        <span class="rate-percent">33</span>
+                    </div>
+                <div class="field">
+                    <input class="rate-input" type="range" min="0" max="100" value="33" steps="1">
+                </div>
+            </div>
+    </div>
+
+
+
+            <div class="sec7" >Attachments Details
+                <div class="chart2"id="chart2"></div>
+                <div class="docFile">
+                    <i class='bx bxs-file-doc' style='color:#2984fe'></i>
+                    Documents Files<br>1,225
+                    <span class="gb">1.3GB</span>
+                </div>
+                    
+                <div class="imgFile">
+                    <i class='bx bxs-file-image' style='color:#32c7ee'></i>
+                    Images Files<br>1,849
+                    <span class="gb">7.3GB</span>
+                </div>
+
+                <div class="voiceFile">
+                    <i class='bx bxs-user-voice' style='color:#f9a618' ></i>
+                    Voice Files<br>1,005
+                    <span class="gb">4.1GB</span>
+                </div>
+                
+                <div class="vidFile">
+                    <i class='bx bxs-videos' style='color:#f73b4f'></i>
+                    Vidoes Files<br>723
+                    <span class="gb">1.3GB</span>
+                </div>
+            </div>
+
+            <div class="sec8" id="chart3">Response & Resolution Time</div>
+
+    </div>
+<!--</div>-->
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="chart.js"></script>
+    <script src="slide.js"></script>
 </body>
 
 </html>
