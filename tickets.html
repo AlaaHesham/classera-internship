@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--CSS File-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <!--<div class="outer-grid-container">-->
+
+    <!--Sidebar-->
+    <nav class="sidebar">
+        <header>
+            <div class="logo">
+                <!--Classera Logo-->
+                <span class="img-logo">
+                    <img src="MicrosoftTeams-image.png" alt="logo" />
+                </span>
+                <!--Sidebar Title-->
+                <div class="headertext">
+                    <span class="name">Classera</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="section">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="tickets.html">
+                            <i class='bx bx-message-square-check icon'></i>
+                            <span class="section">Tickets</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-user icon'></i>
+                            <span class="section">Customers</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-buildings icon'></i>
+                            <span class="section">Organizations</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="section">Reporting</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-cog icon'></i>
+                            <span class="section">Settings</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!--Sera and Dark Mode-->
+            <div class="bottom-content">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-message-square-dots icon'></i>
+                            <span class="section">Sera</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link mode">
+                        
+                            <i class='bx bx-moon icon'></i>
+                            <i class='bx bxs-sun icon'></i>
+                            <span class="section mode-text">Dark Mode</span>
+                            <div class="toggle-switch">
+                                <span class="switch"></span>
+                            </div>
+                        
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Header -->
+
+    <div class="main-header">
+
+        <div class="search-div">
+            <div class="search-box">
+                <i class="bx bx-search"></i>
+                <input type="text" placeholder="Search ..." />
+            </div>
+        </div>
+
+        <div class="notification">
+            <span class="msg">
+                <i class='bx bx-envelope'></i>
+                
+            </span>
+
+            <span class="bell">
+                <i class='bx bx-bell'></i>
+            </span>
+
+            <span class="profile-img">
+                <img class="pro" src="default-user-image.png" alt="profile">
+                <i class='bx bx-chevron-down'></i>
+            </span>
+        </div> 
+    </div>
+
+<!--Tickets-->
+<div id="tickets-grid" class="tickets-grid">
+    <div class="tickets-title">
+        <i class='bx bx-home-alt icon'></i>
+        <i class='bx bx-chevron-right'></i>
+        <span>Tickets</span>
+        <div class="title2">
+            <p class="main-title">Tickets</p>
+            <div class="t-buttons">
+                <span class="export">
+                    <button><i class='bx bx-cloud-upload'></i>Export</button>
+                </span>
+                <a href="add tickets.html" class="add-ticket">
+                    <button id="add-tic"><i class='bx bx-plus'></i>Add Ticket</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tickets-sections">
+        <a href="#">
+            <span class="overview">Overview</span>
+        </a>
+        <a href="#">
+            <span class="devlopment">Devlopment</span>
+        </a>
+        <a href="#">
+            <span class="newFeature">New Feature</span>
+        </a>
+        <a href="#">
+            <span class="faq">FAQ</span>
+        </a>
+        <hr>
+    </div>
+
+
+
+    <div class="open">
+        <div class="data-grid">
+            <p>Open</p><br>
+            <span class="number">7</span>     
+        </div>  
+        <span id="chart4" class="chart4"></span>    
+    </div>
+
+    <div class="in-progress">
+        <div class="data-grid">  
+                <p>In Progress</p><br>
+                <span class="number">15</span>       
+        </div>
+        <span id="chart5" class="chart5"></span> 
+    </div>
+
+    <div class="pending">
+        <div class="data-grid"> 
+                <p>Pending</p><br>
+                <span class="number">44</span>     
+        </div>
+        <span id="chart6" class="chart6"></span>  
+    </div>
+
+    <div class="resolved">
+        <div class="data-grid"> 
+                <p>Resolved</p> <br> 
+                <span class="number">4205</span>      
+        </div>
+        <span id="chart7" class="chart7"></span>  
+    </div>
+
+    <div class="table-options">
+        <span class="filter">
+            <button><i class='bx bx-filter'></i>Filters</button>
+        </span>
+        <span class="table-search">
+            <div class="search-div">
+                <div class="search-box">
+                    <i class="bx bx-search"></i>
+                    <input type="text" placeholder="Search in table..." />
+                </div>
+            </div>
+        </span>
+            
+    </div>
+
+    <table class="tickets-table">
+        <thead>
+            <tr>
+                <td class="t-id">ID</td>
+                <td>Brand</td>
+                <td>Requester</td>
+                <td>Assignee</td>
+                <td>Status</td>
+                <td>Interactions</td>
+                <td>Responsiveness</td>
+                <td class="t-date">Date</td>
+            </tr> 
+        </thead>
+
+        <tbody>
+            <tr>  
+                <td class="t-id">225125</td>
+
+                <td class="brand">
+                    <img class="brand-img" src="classeraPremium.png" height="40px"/>
+                    <span class="brand-text">LMS<br><small>Reports</small></span>
+                </td>
+        
+                <td class="request">
+                    <div class="user-container">
+                        <img class="user" src="default-user-image.png"/>
+                        <span class="request-text">User Name<br><small>user position</small></span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="user-container">
+                        <img class="user" src="default-user-image.png"/>
+                        <span class="request-text">User Name<br><small>user position</small></span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="status">
+                        <i class='bx bxs-circle'></i>In Progress
+                    </div>
+                </td>
+
+                <td>
+                    <img class="user" src="default-user-image.png"/>
+                    <img class="user1" src="default-user-image.png"/>
+                    <img class="user1" src="default-user-image.png"/>
+                    <img class="user1" src="default-user-image.png"/>
+                    <img class="user1" src="solid background.jpg"/>
+                    <span class="interactions">+3</span>
+                </td>
+
+                <td>
+                    <div class="res">
+                        <input class="responsiveness" type="range" min="0" max="100" value="30" steps="1"/>
+                        <span>30%</span>
+                    </div>
+                </td>
+                
+                <td class="date">Feb 22,2022</td>
+            </tr>
+
+            <tr>
+                <td class="t-id">225124</td>
+
+                <td class="brand">
+                    <img class="brand-img" src="Cpay.png" height="40px"/>
+                    <span class="brand-text">Cpay<br><small>Payment Module</small></span>
+                </td>
+        
+                <td class="request">
+                    <div class="user-container">
+                        <img class="user" src="default-user-image.png"/>
+                        <span class="request-text">User Name<br><small>user position</small></span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="user-container">
+                        <img class="user" src="default-user-image.png"/>
+                        <span class="request-text">User Name<br><small>user position</small></span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="statusp">
+                        <i class='bx bxs-circle'></i>Pending
+                    </div>
+                </td>
+
+                <td>
+                    <img class="user" src="default-user-image.png"/>
+                    <img class="user1" src="default-user-image.png"/>
+                    <img class="user1" src="default-user-image.png"/>
+                    <img class="user1" src="default-user-image.png"/>
+                    <img class="user1" src="solid background.jpg"/>
+                    <span class="interactions">+1</span>
+                </td>
+
+                <td>
+                    <div class="res">
+                        <input class="responsiveness" type="range" min="0" max="100" value="95" steps="1"/>
+                        <span>95%</span>
+                    </div>
+                </td>
+                
+                <td class="date">Feb 21,2022</td>
+            </tr>
+
+            <tr>
+                <td class="t-id">225125</td>
+
+                <td class="brand">
+                    <img class="brand-img" src="Cspaces.png" height="40px"/>
+                    <span class="brand-text">LMS<br><small>Courses Module</small></span>
+                </td>
+        
+                <td class="request">
+                    <div class="user-container">
+                        <img class="user" src="default-user-image.png"/>
+                        <span class="request-text">User Name<br><small>user position</small></span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="user-container">
+                        <img class="user" src="default-user-image.png"/>
+                        <span class="request-text">User Name<br><small>user position</small></span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="statusr">
+                        <i class='bx bxs-circle'></i>Resolved
+                    </div>
+                </td>
+
+                <td>
+                    <img class="user" src="default-user-image.png"/>
+                    <img class="user1" src="default-user-image.png"/>
+                    <img class="user1" src="default-user-image.png"/>
+                </td>
+
+                <td>
+                    <div class="res">
+                        <input class="responsiveness" type="range" min="0" max="100" value="90" steps="1"/>
+                        <span>90%</span>
+                    </div>
+                </td>
+                
+                <td class="date">Feb 22,2022</td>
+            </tr>
+
+            <tr>
+                <td class="t-id">225125</td>
+
+                <td class="brand">
+                    <img class="brand-img" src="Creality.png" height="40px"/>
+                    <span class="brand-text">Creality<br><small>Activity Module</small></span>
+                </td>
+        
+                <td class="request">
+                    <div class="user-container">
+                        <img class="user" src="default-user-image.png"/>
+                        <span class="request-text">User Name<br><small>user position</small></span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="user-container">
+                        <img class="user" src="default-user-image.png"/>
+                        <span class="request-text">User Name<br><small>user position</small></span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="statusr">
+                        <i class='bx bxs-circle'></i>Resolved
+                    </div>
+                </td>
+
+                <td>
+                    <img class="user" src="default-user-image.png"/>
+                    <img class="user1" src="default-user-image.png"/>
+                    <img class="user1" src="default-user-image.png"/>
+                    <img class="user1" src="default-user-image.png"/>
+                    <img class="user1" src="solid background.jpg"/>
+                    <span class="interactions">+5</span>
+                </td>
+
+                <td>
+                    <div class="res">
+                        <input class="responsiveness" type="range" min="0" max="100" value="82" steps="1"/>
+                        <span>82%</span>
+                    </div>
+                </td>
+                
+                <td class="date">Feb 22,2022</td>
+            </tr>
+
+            <tr>
+                <td class="t-id">225125</td>
+
+                <td class="brand">
+                    <img class="brand-img" src="classeraPremium.png" height="40px"/>
+                    <span class="brand-text">LMS<br><small>Payment Module</small></span>
+                </td>
+        
+                <td class="request">
+                    <div class="user-container">
+                        <img class="user" src="default-user-image.png"/>
+                        <span class="request-text">User Name<br><small>user position</small></span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="user-container">
+                        <img class="user" src="default-user-image.png"/>
+                        <span class="request-text">User Name<br><small>user position</small></span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="statusp">
+                        <i class='bx bxs-circle'></i>Pending
+                    </div>
+                </td>
+
+                <td>
+                    <img class="user" src="default-user-image.png"/>
+                    <img class="user1" src="default-user-image.png"/>
+                <td>
+                    <div class="res">
+                        <input class="responsiveness" type="range" min="0" max="100" value="90" steps="1"/>
+                        <span>90%</span>
+                    </div>
+                </td>
+                
+                <td class="date">Feb 22,2022</td>
+            </tr>
+
+            <tr>
+                <td class="t-id">225125</td>
+
+                <td class="brand">
+                    <img class="brand-img" src="Cedumalls.png" height="40px"/>
+                    <span class="brand-text">Edumalls<br><small>Order Module</small></span>
+                </td>
+        
+                <td class="request">
+                    <div class="user-container">
+                        <img class="user" src="default-user-image.png"/>
+                        <span class="request-text">User Name<br><small>user position</small></span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="user-container">
+                        <img class="user" src="default-user-image.png"/>
+                        <span class="request-text">User Name<br><small>user position</small></span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="statuso">
+                        <i class='bx bxs-circle'></i>Open
+                    </div>
+                </td>
+
+                <td>
+                    <img class="user" src="default-user-image.png"/>
+                </td>
+
+                <td>
+                    <div class="res">
+                        <input class="responsiveness" type="range" min="0" max="100" value="15" steps="1"/>
+                        <span>15%</span>
+                    </div>
+                </td>
+                
+                <td class="date">Feb 22,2022</td>
+            </tr>
+
+            <tr>
+                <td class="t-id">225125</td>
+
+                <td class="brand">
+                    <img class="brand-img" src="classeraPremium.png" height="40px"/>
+                    <span class="brand-text">LMS<br><small>Reports</small></span>
+                </td>
+        
+                <td class="request">
+                    <div class="user-container">
+                        <img class="user" src="default-user-image.png"/>
+                        <span class="request-text">User Name<br><small>user position</small></span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="user-container">
+                        <img class="user" src="default-user-image.png"/>
+                        <span class="request-text">User Name<br><small>user position</small></span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="statusr">
+                        <i class='bx bxs-circle'></i>Resolved
+                    </div>
+                </td>
+
+                <td>
+                    <img class="user" src="default-user-image.png"/>
+                    <img class="user1" src="default-user-image.png"/>
+                    <img class="user1" src="default-user-image.png"/>
+                    <img class="user1" src="default-user-image.png"/>
+                    <img class="user1" src="solid background.jpg"/>
+                    <span class="interactions">+2</span>
+                </td>
+
+                <td>
+                    <div class="res">
+                        <input class="responsiveness" type="range" min="0" max="100" value="70" steps="1"/>
+                        <span>70%</span>
+                    </div>
+                </td>
+                
+                <td class="date">Feb 22,2022</td>
+            </tr>
+            
+        </tbody> 
+        <tfoot>
+            <tr>
+                    <td><button class="pre-button">Previous</button></td>
+                    <td colspan="6"><span class="pageOf">Page 1 of 50</span></td>
+                    <td><button class="next-button">Next</button></td>
+            </tr>
+        </tfoot>
+    </table>
+
+</div>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="chart.js"></script>
+    <script src="slide.js"></script>
+</body>
+
+</html>
