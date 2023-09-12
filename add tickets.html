@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--CSS File-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style2.css" />
+
+</head>
+
+<body>
+ <!--Sidebar-->
+ <nav class="sidebar">
+    <header>
+        <div class="logo">
+            <!--Classera Logo-->
+            <span class="img-logo">
+                <img src="MicrosoftTeams-image.png" alt="logo" />
+            </span>
+            <!--Sidebar Title-->
+            <div class="headertext">
+                <span class="name">Classera</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-bar">
+        <div class="menu">
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a href="index.html">
+                        <i class='bx bx-home-alt icon'></i>
+                        <span class="section">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="tickets.html">
+                        <i class='bx bx-message-square-check icon'></i>
+                        <span class="section">Tickets</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-user icon'></i>
+                        <span class="section">Customers</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-buildings icon'></i>
+                        <span class="section">Organizations</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-bar-chart-alt-2 icon'></i>
+                        <span class="section">Reporting</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-cog icon'></i>
+                        <span class="section">Settings</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!--Sera and Dark Mode-->
+        <div class="bottom-content">
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-message-square-dots icon'></i>
+                        <span class="section">Sera</span>
+                    </a>
+                </li>
+
+                <li class="nav-link mode">
+                    
+                        <i class='bx bx-moon icon'></i>
+                        <i class='bx bxs-sun icon'></i>
+                        <span class="section mode-text">Dark Mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- Header -->
+
+<div class="main-header">
+
+    <div class="search-div">
+        <div class="search-box">
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Search ..." />
+        </div>
+    </div>
+
+    <div class="notification">
+        <span class="msg">
+            <i class='bx bx-envelope'></i>
+            
+        </span>
+
+        <span class="bell">
+            <i class='bx bx-bell'></i>
+        </span>
+
+        <span class="profile-img">
+            <img class="pro" src="default-user-image.png" alt="profile">
+            <i class='bx bx-chevron-down'></i>
+        </span>
+    </div> 
+</div>
+
+<!--Tickets-->
+
+<div class="tickets-title">
+    <i class='bx bx-home-alt icon'></i>
+    <i class='bx bx-chevron-right'></i>
+    <span>Tickets</span>
+    <i class='bx bx-chevron-right'></i>
+    <span>Add ticket</span>   
+    <div class="title2">
+        <p class="main-title">Add ticket</p>
+
+    </div>
+    <br>
+</div>
+
+
+<form action="#" method="post"> 
+    
+        <label class="label1"><span>Subject</span><small>Title of tickets</small></label>
+        <input class="textField1" type="text"/>
+    
+        <hr>
+
+    
+        <label class="label2"><span>Description</span><small>Detailed description for the ticket</small></label>
+        <textarea class="Description"></textarea>
+
+        <hr>
+
+        <label class="label3"><span>Brand</span><small>Product on which issue happen</small></label>
+            <div class="selector">
+                <div class="selectField" id="selectField">
+                    <p id="selectText">Select Product</p>
+                    <i class='bx bx-chevron-down' id="arrowIcon"></i>
+                </div>
+
+                <ul id="list" class="hide">
+                    <li class="options">
+                        <img src="classeraPremium.png"/>
+                        <p>Learning Managment System</p>
+                    </li>
+                    <li class="options">
+                        <img src="Cedumalls.png"/>
+                        <p>Edumall</p>
+                    </li>
+                    <li class="options">
+                        <img src="Cspaces.png"/>
+                        <p>Cspaces</p>
+                    </li>
+                    <li class="options">
+                        <img src="Creality.png"/>
+                        <p>Creality</p>
+                    </li>
+                    <li class="options">
+                        <img src="cinspire.png"/>
+                        <p>Cinspire</p>
+                    </li>
+                </ul>
+            </div>
+          
+    
+        <hr>
+
+     <label class="label4"><span>Module</span><small>Module on which issue happen</small></label>
+          <div class="selector">
+            <div class="selectField" id="selectField2">
+                <p id="selectText2">Select Module</p>
+                <i class='bx bx-chevron-down' id="arrowIcon2"></i>
+            </div>
+
+            <ul id="list2" class="hide">
+                <li class="options2">
+                    <p>Assesment Module</p>
+                </li>
+                <li class="options2">
+                    <p>Exams Module</p>
+                </li>
+                <li class="options2">
+                    <p>Grades Managment Module</p>
+                </li>
+                <li class="options2">
+                    <p>Scores Module</p>
+                </li>
+                <li class="options2">
+                    <p>Users Managment Module</p>
+                </li>
+            </ul>
+        </div> 
+
+
+        <hr>
+
+        <span class="formButtons">
+            <input type="button" value="Cancel"/>
+           <!-- <input class="fb2" type="submit" value="Save"/>-->
+                <button type="button" class="fb2" value="save">Save</button>
+            
+        </span>
+    
+</form>
+
+<script>
+    fb2 = document.querySelector(".fb2");
+
+    fb2.onclick = function(){
+        this.innerHTML = '<i id="loader" class="bx bx-loader-alt"></i>';
+        setTimeout(() => {
+            this.innerHTML = "<i id='saveChecked' class='bx bx-check'></i>";
+        }, 2000);
+    }
+</script>
+    
+<script>
+    var selectField = document.getElementById("selectField");
+    var selectText = document.getElementById("selectText");
+    var options = document.getElementsByClassName("options");
+    var list = document.getElementById("list");
+    var arrowIcon = document.getElementById("arrowIcon");
+
+    selectField.onclick = function(){
+        list.classList.toggle("hide");
+        arrowIcon.classList.toggle("rotate");
+        list.classList.toggle("slideDown");
+    }
+
+
+    for(option of options){
+        option.onclick = function(){
+        var textContent = this.querySelector("p").textContent;
+        var imageURL = this.querySelector("img").src;
+        var contentHTML = '<img src="' + imageURL + '" alt="Image" style="width: 60px; position:relative; top: 5px; margin-right: 5px;"> ' + textContent;
+        selectText.innerHTML = contentHTML;
+
+            list.classList.toggle("hide");
+            arrowIcon.classList.toggle("rotate");
+        }
+    }
+</script>
+
+
+<script>
+    var selectField2 = document.getElementById("selectField2");
+    var selectText2 = document.getElementById("selectText2");
+    var options2 = document.getElementsByClassName("options2");
+    var list2 = document.getElementById("list2");
+    var arrowIcon2 = document.getElementById("arrowIcon2");
+
+    selectField2.onclick = function(){
+        list2.classList.toggle("hide");
+        arrowIcon2.classList.toggle("rotate");
+        list2.classList.toggle("slideDown");
+    }
+
+
+    for(option of options2){
+        option.onclick = function(){
+            selectText2.innerHTML = this.textContent;
+            list2.classList.toggle("hide");
+            arrowIcon2.classList.toggle("rotate");
+        }
+    }
+</script>
+
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="chart.js"></script>
+    <script src="slide.js"></script>
+</body>
+</html>
