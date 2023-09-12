@@ -4,7 +4,7 @@ const dashboardPage = document.getElementById("dashboard"),
 
 
 let dumbbellCharts = [];
-
+let barChart, donutChart, chart;
 sidebarFields.forEach(sidebarField => {
     sidebarField.onfocus = () => {
         let selectedField = sidebarField.innerText.toLowerCase();
@@ -22,19 +22,19 @@ sidebarFields.forEach(sidebarField => {
         sidebarField.classList.add("selected");
 
         // rerendering dashboard page charts
-        // if (!dashboardPage.classList.contains("inactive")) {
-        //     console.log("rendering");
-        //     var barChart = new ApexCharts(document.querySelector("#chart3"), options3);
-        //     barChart.render();
-        //     var donutChart = new ApexCharts(document.querySelector("#chart2"), options2);
-        //     donutChart.render();
-        //     var chart = new ApexCharts(document.querySelector("#chart"), options);
-        //     chart.render();
-        // }
-        // else {
-        //     console.log("destroying");
-        //     // x
-        // }
+        if (!dashboardPage.classList.contains("inactive")) {
+            barChart = new ApexCharts(document.querySelector("#chart3"), options3);
+            barChart.render();
+            donutChart = new ApexCharts(document.querySelector("#chart2"), options2);
+            donutChart.render();
+            chart = new ApexCharts(document.querySelector("#chart"), options);
+            chart.render();
+        }
+        else {
+            barChart.destroy();
+            donutChart.destroy();
+            chart.destroy();
+        }
 
         // rerendering tickets page charts
         if (!ticketsPage.classList.contains("inactive")) {
@@ -86,7 +86,6 @@ cancelBtn.addEventListener("click", () => {
 // functions
 
 function resetAddTicketPage() {
-
     document.querySelector(".sidebar li a.tickets-section").focus();
     addTicketPage.classList.add("inactive");
     saveBtn.innerHTML = "Save";
@@ -94,5 +93,4 @@ function resetAddTicketPage() {
     document.querySelector(".add-ticket-content .field-container textarea").value = "";
     brandSelectorContent.innerHTML = "<span class='selector'> Select Product</span>";
     moduleSelectorContent.innerHTML = "<span class='selector'> Select Module</span>";
-
 }

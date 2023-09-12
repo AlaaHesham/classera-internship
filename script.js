@@ -56,6 +56,7 @@ function positionRatioBox() {
 }
 
 body.onload = async () => {
+    document.querySelector(".sidebar li a.dashboard-section").focus();
     while (ratio.value < 33) {
         ratio.value++;
         await delay(500 / 33);

@@ -216,10 +216,3 @@ var options4 = {
 const dumbchartDivs = document.querySelectorAll(".dumbchart");
 
 const dumbchartColors = ['#E91E63', '#005AF0', '#FF9800', '#00a71d'];
-
-var barChart = new ApexCharts(document.querySelector("#chart3"), options3);
-barChart.render();
-var donutChart = new ApexCharts(document.querySelector("#chart2"), options2);
-donutChart.render();
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-chart.render();
