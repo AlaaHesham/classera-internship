@@ -111,8 +111,8 @@
     border: 1px solid var(--border-color);
     padding: 10px 20px;
     border-radius: 10px;
-    height: 120px;
-    width: calc(25% - 30px);
+    height: 130px;
+    width: calc(25% - 20px);
     overflow: hidden;
     background-color: var(--body-color);
     transition: var(--tran-05);
@@ -202,6 +202,7 @@
     border-collapse: collapse;
     width: 100%;
     color: var(--text-color);
+    font-size: 0.9rem;
 }
 
 .tickets table thead {
@@ -223,7 +224,13 @@ tbody {
 }
 
 .tickets table td {
-    padding: 5px 15px;
+    padding: 5px 10px;
+}
+
+.tickets table td .user-id {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* brand */
@@ -270,7 +277,7 @@ tbody {
 .tickets table td .status-container {
     display: flex;
     align-items: center;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 .tickets table td .status-bubble {
@@ -279,6 +286,7 @@ tbody {
     justify-content: center;
     padding: 0 10px;
     border-radius: 20px;
+    height: 30px;
 }
 
 .tickets table td .status-bubble div {
@@ -319,7 +327,7 @@ tbody {
 
 .tickets table td .interactions-content {
     position: relative;
-    width: 100%;
+    width: 100px;
     height: 50px;
 }
 
@@ -361,12 +369,12 @@ tbody {
 .tickets table td .responsiveness-content {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 100%;
+    /* justify-content: center; */
+    width: 190px;
 }
 
 .tickets table td .responsiveness-content .range-container {
-    width: 70%;
+    width: 100%;
     height: 7px;
     background-color: rgb(238, 236, 236);
     border-radius: 10px;
@@ -376,6 +384,19 @@ tbody {
     height: 7px;
     background-color: var(--primary-color);
     border-radius: 10px;
+}
+
+.tickets table td .responsiveness-content span {
+    margin-left: 5px;
+}
+
+/* Date */
+
+td .date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
 }
 
 /* foot */

@@ -1,0 +1,175 @@
+body {
+    background-color: var(--body-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-left: 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    background-color: white;
+    height: 100%;
+}
+
+form>div {
+    height: fit-content;
+}
+
+form>div h2 {
+    font-weight: 600;
+    padding: 40px 0;
+}
+
+form>div div.header {
+    margin-bottom: 25px;
+}
+
+form>div div.header p {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+form>div div.header a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+form>div div.header a:active {
+    color: rgb(25, 66, 104);
+}
+
+form>div section {
+    margin-top: 10px;
+}
+
+form>div section label,
+form>div div.header span {
+    font-size: 1.1rem;
+}
+
+form>div input[type="text"],
+form>div input[type="password"],
+form>div input[type="submit"] {
+    border-radius: 7px;
+    padding: 10px;
+    width: 400px;
+    font-size: 1.1rem;
+    height: 50px;
+}
+
+form>div input[type="text"],
+form>div input[type="password"] {
+    background-color: rgb(0 64 207 / 7%);
+    outline: none;
+    border: 1px solid rgb(75 75 75 / 38%);
+}
+
+form>div input[type="submit"] {
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 30px;
+}
+
+form>div input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+form>div input[type="submit"]:active {
+    background-color: rgb(25, 66, 104);
+}
+
+.google-sign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid rgb(75 75 75 / 38%);
+    border-radius: 7px;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    height: 50px;
+}
+
+.google-sign:hover {
+    cursor: pointer;
+}
+
+.google-sign:active {
+    background-color: var(--border-color);
+}
+
+.google-sign img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+/* -------------------------------- */
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    width: 55%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 50px 100px;
+}
+
+.right-content p {
+    color: white;
+    font-size: 2rem;
+}
+
+.right-content .imgs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.right-content .img-container,
+.right-content .img-container2 {
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--body-color);
+    border-radius: 20px;
+}
+
+.right-content .img-container2 {
+    position: absolute;
+    top: -70px;
+    right: -60px;
+    opacity: 0.9;
+}
+
+.right-content .img-container img {
+    /* height: 340px; */
+    width: 720px;
+}
+
+.right-content .img-container2 img {
+    height: 180px;
+}
+
+
+.right-content .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.right-content .footer span {
+    color: white;
+    font-size: 1.5rem;
+}
